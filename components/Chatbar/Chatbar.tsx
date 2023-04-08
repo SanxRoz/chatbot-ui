@@ -47,8 +47,6 @@ export const Chatbar: FC<Props> = ({
   selectedConversation,
   apiKey,
   serverSideApiKeyIsSet,
-  pluginKeys,
-  serverSidePluginKeysSet,
   folders,
   onCreateFolder,
   onDeleteFolder,
@@ -203,8 +201,6 @@ export const Chatbar: FC<Props> = ({
         lightMode={lightMode}
         apiKey={apiKey}
         serverSideApiKeyIsSet={serverSideApiKeyIsSet}
-        pluginKeys={pluginKeys}
-        serverSidePluginKeysSet={serverSidePluginKeysSet}
         conversationsCount={conversations.length}
         onToggleLightMode={onToggleLightMode}
         onApiKeyChange={onApiKeyChange}
