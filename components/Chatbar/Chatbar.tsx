@@ -126,18 +126,18 @@ export const Chatbar: FC<Props> = ({
     >
       <div className="flex items-center">
         <button
-          className="flex w-[190px] flex-shrink-0 cursor-pointer select-none items-center gap-3 rounded-md border border-white/20 p-3 text-[14px] leading-normal text-white transition-colors duration-200 hover:bg-gray-500/10"
+          className="flex w-[190px] flex-shrink-0 cursor-pointer select-none items-center gap-3 rounded-2xl border-0 bg-[#ffffff1a] p-3 text-[14px] leading-normal text-white transition-colors duration-200 hover:bg-[#ffffff1a]"
           onClick={() => {
             onNewConversation();
             setSearchTerm('');
           }}
         >
           <IconPlus size={18} />
-          {t('New chat')}
+          {t('New lecture')}
         </button>
 
         <button
-          className="ml-2 flex flex-shrink-0 cursor-pointer items-center gap-3 rounded-md border border-white/20 p-3 text-[14px] leading-normal text-white transition-colors duration-200 hover:bg-gray-500/10"
+          className="ml-2 flex h-full flex-shrink-0 cursor-pointer items-center gap-3 rounded-2xl border-0 bg-[#ffffff1a] p-3 text-[14px] leading-normal text-white transition-colors duration-200 hover:bg-[#ffffff1a]"
           onClick={() => onCreateFolder(t('New folder'))}
         >
           <IconFolderPlus size={18} />

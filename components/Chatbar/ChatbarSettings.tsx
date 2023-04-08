@@ -7,14 +7,11 @@ import { Import } from '../Settings/Import';
 import { Key } from '../Settings/Key';
 import { SidebarButton } from '../Sidebar/SidebarButton';
 import { ClearConversations } from './ClearConversations';
-import { PluginKeys } from './PluginKeys';
 
 interface Props {
   lightMode: 'light' | 'dark';
   apiKey: string;
   serverSideApiKeyIsSet: boolean;
-  pluginKeys: PluginKey[];
-  serverSidePluginKeysSet: boolean;
   conversationsCount: number;
   onToggleLightMode: (mode: 'light' | 'dark') => void;
   onApiKeyChange: (apiKey: string) => void;
@@ -29,21 +26,17 @@ export const ChatbarSettings: FC<Props> = ({
   lightMode,
   apiKey,
   serverSideApiKeyIsSet,
-  pluginKeys,
-  serverSidePluginKeysSet,
   conversationsCount,
   onToggleLightMode,
   onApiKeyChange,
   onClearConversations,
   onExportConversations,
   onImportConversations,
-  onPluginKeyChange,
-  onClearPluginKey,
 }) => {
   const { t } = useTranslation('sidebar');
 
   return (
-    <div className="flex flex-col items-center space-y-1 border-t border-white/20 pt-1 text-sm">
+    <div className="flex flex-col items-center space-y-1 border-t border-[#ffffff1a] pt-1 text-sm">
       {conversationsCount > 0 ? (
         <ClearConversations onClearConversations={onClearConversations} />
       ) : null}
@@ -66,16 +59,8 @@ export const ChatbarSettings: FC<Props> = ({
         }
       />
 
-      {!(serverSideApiKeyIsSet) ? (
+      {!serverSideApiKeyIsSet ? (
         <Key apiKey={apiKey} onApiKeyChange={onApiKeyChange} />
-      ) : null}
-
-      {!(serverSidePluginKeysSet) ? (
-        <PluginKeys
-          pluginKeys={pluginKeys}
-          onPluginKeyChange={onPluginKeyChange}
-          onClearPluginKey={onClearPluginKey}
-        />
       ) : null}
     </div>
   );
