@@ -253,7 +253,7 @@ export const ChatInput: FC<Props> = ({
     <div className="absolute bottom-0 left-0 w-full border-transparent pt-6 dark:border-white/20 md:pt-2">
       {messageIsStreaming && (
         <button
-          className="top-0 left-0 right-0 mx-auto mb-3 flex w-fit items-center gap-3 rounded-2xl border-0 bg-white py-2 px-4 text-black backdrop-blur dark:border-neutral-600 dark:bg-[#ffffff1a] dark:text-white md:mb-[10px] md:mb-0 md:mt-2"
+          className="top-0 left-0 right-0 mx-auto mb-3 flex w-fit items-center gap-3 rounded-lg border-0 bg-white py-2 px-4 text-black backdrop-blur dark:border-neutral-600 dark:bg-[#C6C7F8] dark:text-[#1C1C1C] md:mb-[10px] md:mb-0 md:mt-2"
           onClick={handleStopConversation}
         >
           <IconPlayerStop size={16} /> {t('Stop Generating')}
@@ -262,7 +262,8 @@ export const ChatInput: FC<Props> = ({
 
       {!messageIsStreaming && !conversationIsEmpty && (
         <button
-          className="top-0 left-0 right-0 mx-auto mb-3 flex w-fit items-center gap-3 rounded-2xl border-0 bg-white py-2 px-4 text-black backdrop-blur dark:border-neutral-600 dark:bg-[#ffffff1a] dark:text-white md:mb-[10px] md:mb-0 md:mt-2"
+          className="top-0 left-0 right-0 mx-auto mb-3 flex w-fit items-center gap-3 rounded-lg border-0 bg-white py-2 px-4 text-black backdrop-blur dark:border-neutral-600 dark:bg-[#C6C7F8] dark:text-[#1C1C1C]text-[#1C1C1C]
+text-[#1C1C1C] md:mb-[10px] md:mb-0 md:mt-2"
           onClick={onRegenerate}
         >
           <IconRepeat size={16} /> {t('Regenerate response')}
@@ -297,7 +298,7 @@ export const ChatInput: FC<Props> = ({
 
             <textarea
               ref={textareaRef}
-              className="m-0 w-full resize-none backdrop-blur  rounded-2xl border-0 bg-transparent p-0 py-2 pr-8 pl-10 text-black dark:bg-transparent dark:text-white dark:placeholder:text-[#ffffff33] md:py-3 md:pl-10"
+              className="m-0 w-full resize-none rounded-2xl  border-0 bg-transparent p-0 py-2 pr-8 pl-10 text-black backdrop-blur dark:bg-transparent dark:text-white dark:placeholder:text-[#ffffff33] md:py-3 md:pl-10"
               style={{
                 resize: 'none',
                 bottom: `${textareaRef?.current?.scrollHeight}px`,
