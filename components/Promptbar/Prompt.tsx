@@ -62,7 +62,7 @@ export const PromptComponent: FC<Props> = ({
       </button>
 
       {(isDeleting || isRenaming) && (
-        <div className="absolute right-1 z-10 flex text-gray-300">
+        <div className="absolute right-1 flex text-gray-300">
           <button
             className="min-w-[20px] p-1 text-neutral-400 hover:text-neutral-100"
             onClick={(e) => {
@@ -91,7 +91,7 @@ export const PromptComponent: FC<Props> = ({
       )}
 
       {!isDeleting && !isRenaming && (
-        <div className="absolute right-1 z-10 flex text-gray-300">
+        <div className="absolute right-1 flex text-gray-300">
           <button
             className="min-w-[20px] p-1 text-neutral-400 hover:text-neutral-100"
             onClick={(e) => {
