@@ -124,7 +124,7 @@ export const Chatbar: FC<Props> = ({
     >
       <div className="flex items-center">
         <button
-          className="flex w-[190px] flex-shrink-0 cursor-pointer select-none items-center gap-3 rounded-2xl border-0 bg-[#C6C7F8] p-3 text-[14px] leading-normal text-[#1C1C1C] transition-colors duration-200 hover:bg-[#C6C7F8]"
+          className="flex w-[190px] flex-shrink-0 cursor-pointer select-none items-center gap-3 rounded-lg border-0 bg-[#C6C7F8] p-3 text-[14px] font-semibold leading-normal text-[#1C1C1C] transition-colors duration-200 hover:bg-[#C6C7F8]"
           onClick={() => {
             onNewConversation();
             setSearchTerm('');
@@ -135,7 +135,7 @@ export const Chatbar: FC<Props> = ({
         </button>
 
         <button
-          className="ml-2 flex h-full flex-shrink-0 cursor-pointer items-center gap-3 rounded-2xl border-0 bg-[#C6C7F8] p-3 text-[14px] leading-normal text-[#1C1C1C] transition-colors duration-200 hover:bg-[#C6C7F8]"
+          className="ml-2 flex h-full flex-shrink-0 cursor-pointer items-center gap-3 rounded-lg border-0 bg-[#C6C7F8] p-3 text-[14px] font-semibold leading-normal text-[#1C1C1C] transition-colors duration-200 hover:bg-[#C6C7F8]"
           onClick={() => onCreateFolder(t('New folder'))}
         >
           <IconFolderPlus size={18} />

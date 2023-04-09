@@ -94,7 +94,7 @@ export const Promptbar: FC<Props> = ({
     >
       <div className="flex items-center">
         <button
-          className="text-sidebar flex w-[190px] flex-shrink-0 cursor-pointer select-none items-center gap-3 rounded-2xl bg-[#ffffff1a] p-3 text-white transition-colors duration-200"
+          className="text-sidebar flex w-[190px] flex-shrink-0 cursor-pointer select-none items-center gap-3 rounded-lg bg-[#C6C7F8] p-3 font-semibold text-[#1C1C1C] transition-colors duration-200"
           onClick={() => {
             onCreatePrompt();
             setSearchTerm('');
@@ -105,7 +105,7 @@ export const Promptbar: FC<Props> = ({
         </button>
 
         <button
-          className="ml-2 flex h-full flex-shrink-0 cursor-pointer items-center gap-3 rounded-2xl border-0 bg-[#ffffff1a] p-3 text-sm text-white transition-colors duration-200"
+          className="ml-2 flex h-full flex-shrink-0 cursor-pointer items-center gap-3 rounded-lg border-0 bg-[#C6C7F8] p-3 text-sm font-semibold text-[#1C1C1C] transition-colors duration-200"
           onClick={() => onCreateFolder(t('New folder'))}
         >
           <IconFolderPlus size={16} />
