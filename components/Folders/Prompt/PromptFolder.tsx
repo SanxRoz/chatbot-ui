@@ -99,7 +99,7 @@ export const PromptFolder: FC<Props> = ({
     <>
       <div className="relative flex items-center">
         {isRenaming ? (
-          <div className="flex w-full items-center gap-3 bg-[#343541]/90 p-3">
+          <div className="flex w-full items-center gap-3 bg-[#ffffff1a] p-3">
             {isOpen ? (
               <IconCaretDown size={18} />
             ) : (
@@ -116,7 +116,7 @@ export const PromptFolder: FC<Props> = ({
           </div>
         ) : (
           <button
-            className={`flex w-full cursor-pointer items-center gap-3 rounded-lg p-3 text-sm transition-colors duration-200 hover:bg-[#343541]/90`}
+            className={`flex w-full cursor-pointer items-center gap-3 rounded-lg p-3 text-sm transition-colors duration-200 hover:bg-[#ffffff1a]`}
             onClick={() => setIsOpen(!isOpen)}
             onDrop={(e) => handleDrop(e, currentFolder)}
             onDragOver={allowDrop}
