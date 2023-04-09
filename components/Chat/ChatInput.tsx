@@ -297,7 +297,7 @@ export const ChatInput: FC<Props> = ({
 
             <textarea
               ref={textareaRef}
-              className="m-0 w-full resize-none rounded-2xl border-0 bg-transparent p-0 py-2 pr-8 pl-10 text-black dark:bg-transparent dark:text-white dark:placeholder:text-[#ffffff33] md:py-3 md:pl-10"
+              className="m-0 w-full resize-none backdrop-blur  rounded-2xl border-0 bg-transparent p-0 py-2 pr-8 pl-10 text-black dark:bg-transparent dark:text-white dark:placeholder:text-[#ffffff33] md:py-3 md:pl-10"
               style={{
                 resize: 'none',
                 bottom: `${textareaRef?.current?.scrollHeight}px`,
