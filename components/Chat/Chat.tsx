@@ -217,10 +217,10 @@ export const Chat: FC<Props> = memo(
                 </>
               ) : (
                 <>
-                  <div className="flex justify-center border border-b-neutral-300 bg-neutral-100 py-2 text-sm text-neutral-500 dark:border-none dark:bg-[#444654] dark:text-neutral-200">
+                  <div className="flex justify-center border border-b-neutral-300 bg-neutral-100 py-3 text-sm text-neutral-500 dark:border-none dark:bg-[#1C1C1C] dark:text-neutral-200">
                     {t('Model')}: {conversation.model.name}
                     <button
-                      className="ml-2 cursor-pointer hover:opacity-50"
+                      className="ml-2 hidden cursor-pointer hover:opacity-50"
                       onClick={handleSettings}
                     >
                       <IconSettings size={18} />
@@ -250,7 +250,7 @@ export const Chat: FC<Props> = memo(
                   {loading && <ChatLoader />}
 
                   <div
-                    className="h-[162px] bg-white dark:bg-[#343541]"
+                    className="h-[162px] bg-white dark:bg-[#000000cc]"
                     ref={messagesEndRef}
                   />
                 </>
@@ -279,7 +279,7 @@ export const Chat: FC<Props> = memo(
         {showScrollDownButton && (
           <div className="absolute bottom-0 right-0 mb-4 mr-4 pb-20">
             <button
-              className="flex h-7 w-7 items-center justify-center rounded-full bg-neutral-300 text-gray-800 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-neutral-200"
+              className="focus:ring-Fuchsia-600 flex h-7 w-7 items-center justify-center rounded-full bg-neutral-300 text-gray-800 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 dark:bg-[#ffffff1a] dark:text-neutral-200"
               onClick={handleScrollDown}
             >
               <IconArrowDown size={18} />
