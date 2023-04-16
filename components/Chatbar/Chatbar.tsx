@@ -120,22 +120,22 @@ export const Chatbar: FC<Props> = ({
 
   return (
     <div
-      className={`fixed top-0 bottom-0 z-50 flex h-full w-[260px] flex-none flex-col space-y-2 border border-[#ffffff1a] bg-[#1C1C1C] p-2 transition-all sm:relative sm:top-0`}
+      className={`fixed top-0 bottom-0 z-50 flex h-full w-[260px] flex-none flex-col space-y-2 border bg-white p-2 text-[#1C1C1C] transition-all dark:border-[#ffffff1a] dark:bg-[#1C1C1C] dark:text-white sm:relative sm:top-0`}
     >
       <div className="flex items-center">
         <button
-          className="flex w-[190px] flex-shrink-0 cursor-pointer select-none items-center gap-3 rounded-lg border-0 bg-[#C6C7F8] p-3 text-[14px] font-semibold leading-normal text-[#1C1C1C] transition-colors duration-200 hover:bg-[#C6C7F8]"
+          className="flex w-[190px] flex-shrink-0 cursor-pointer select-none items-center gap-3 rounded-lg border-0 bg-[#1C1C1C] p-3 text-[14px] font-semibold leading-normal text-white transition-colors duration-200 hover:bg-[#0A0A0A] dark:bg-[#C6C7F8] dark:text-[#1C1C1C] dark:hover:bg-[#A4A6F4]"
           onClick={() => {
             onNewConversation();
             setSearchTerm('');
           }}
         >
           <IconPlus size={18} />
-          {t('New lecture')}
+          {t('New chat')}
         </button>
 
         <button
-          className="ml-2 flex h-full flex-shrink-0 cursor-pointer items-center gap-3 rounded-lg border-0 bg-[#C6C7F8] p-3 text-[14px] font-semibold leading-normal text-[#1C1C1C] transition-colors duration-200 hover:bg-[#C6C7F8]"
+          className="ml-2 flex h-full flex-shrink-0 cursor-pointer items-center gap-3 rounded-lg border-0 bg-[#1C1C1C] p-3 text-[14px] font-semibold leading-normal text-white transition-colors duration-200 hover:bg-[#0A0A0A] dark:bg-[#C6C7F8] dark:text-[#1C1C1C] dark:hover:bg-[#A4A6F4]"
           onClick={() => onCreateFolder(t('New folder'))}
         >
           <IconFolderPlus size={18} />

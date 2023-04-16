@@ -41,7 +41,7 @@ export const PromptComponent: FC<Props> = ({
   return (
     <div className="relative flex items-center">
       <button
-        className="flex w-full cursor-pointer items-center gap-3 rounded-lg p-3 text-sm transition-colors duration-200 hover:bg-[#ffffff1a]"
+        className="flex w-full cursor-pointer items-center gap-3 rounded-lg p-3 text-sm transition-colors duration-200 hover:bg-[#0000001a] dark:hover:bg-[#ffffff1a]"
         draggable="true"
         onClick={(e) => {
           e.stopPropagation();

@@ -90,11 +90,11 @@ export const Promptbar: FC<Props> = ({
 
   return (
     <div
-      className={`fixed top-0 right-0 z-50 flex h-full w-[260px] flex-none flex-col space-y-2 border border-[#ffffff1a] bg-[#1C1C1C] p-2 text-[14px] transition-all sm:relative sm:top-0`}
+      className={`fixed top-0 right-0 z-50 flex h-full w-[260px] flex-none flex-col space-y-2 border border-[#0000001a] bg-white p-2 text-[14px] text-[#1C1C1C] transition-all dark:border-[#ffffff1a] dark:bg-[#1C1C1C] dark:text-white sm:relative sm:top-0`}
     >
       <div className="flex items-center">
         <button
-          className="text-sidebar flex w-[190px] flex-shrink-0 cursor-pointer select-none items-center gap-3 rounded-lg bg-[#C6C7F8] p-3 font-semibold text-[#1C1C1C] transition-colors duration-200"
+          className="text-sidebar flex w-[190px] flex-shrink-0 cursor-pointer select-none items-center gap-3 rounded-lg bg-[#1C1C1C] p-3 font-semibold text-white transition-colors duration-200 hover:bg-[#0A0A0A] dark:bg-[#C6C7F8] dark:text-[#1C1C1C]"
           onClick={() => {
             onCreatePrompt();
             setSearchTerm('');
@@ -105,7 +105,7 @@ export const Promptbar: FC<Props> = ({
         </button>
 
         <button
-          className="ml-2 flex h-full flex-shrink-0 cursor-pointer items-center gap-3 rounded-lg border-0 bg-[#C6C7F8] p-3 text-sm font-semibold text-[#1C1C1C] transition-colors duration-200"
+          className="ml-2 flex h-full flex-shrink-0 cursor-pointer items-center gap-3 rounded-lg border-0 bg-[#1C1C1C] p-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#0A0A0A] dark:bg-[#C6C7F8] dark:text-[#1C1C1C]"
           onClick={() => onCreateFolder(t('New folder'))}
         >
           <IconFolderPlus size={16} />
