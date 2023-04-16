@@ -253,7 +253,7 @@ export const ChatInput: FC<Props> = ({
     <div className="absolute bottom-0 left-0 w-full border-transparent pt-6 dark:border-white/20 md:pt-2">
       {messageIsStreaming && (
         <button
-          className="top-0 left-0 right-0 mx-auto mb-3 flex w-fit items-center gap-3 rounded-lg border-0 bg-white py-2 px-4 text-black backdrop-blur dark:border-neutral-600 dark:bg-[#C6C7F8] dark:text-[#1C1C1C] md:mb-[10px] md:mb-0 md:mt-2"
+          className="top-0 left-0 right-0 mx-auto mb-3 flex w-fit items-center gap-3 rounded-lg border-0 bg-[#1C1C1C] py-2 px-4 text-white backdrop-blur dark:border-neutral-600 dark:bg-[#C6C7F8] dark:text-[#1C1C1C] md:mb-[10px] md:mb-0 md:mt-2"
           onClick={handleStopConversation}
         >
           <IconPlayerStop size={16} /> {t('Stop Generating')}
@@ -262,8 +262,7 @@ export const ChatInput: FC<Props> = ({
 
       {!messageIsStreaming && !conversationIsEmpty && (
         <button
-          className="dark:text-[#1C1C1C]text-[#1C1C1C] top-0 left-0 right-0 mx-auto mb-3 flex w-fit items-center gap-3 rounded-lg border-0 bg-white py-2 px-4 text-black text-[#1C1C1C] backdrop-blur dark:border-neutral-600
-dark:bg-[#C6C7F8] md:mb-[10px] md:mb-0 md:mt-2"
+          className="top-0 left-0 right-0 mx-auto mb-3 flex w-fit items-center gap-3 rounded-lg border-0 bg-[#1C1C1C] py-2 px-4 text-white backdrop-blur dark:border-neutral-600 dark:bg-[#C6C7F8] dark:text-[#1C1C1C] md:mb-[10px] md:mb-0 md:mt-2"
           onClick={onRegenerate}
         >
           <IconRepeat size={16} /> {t('Regenerate response')}

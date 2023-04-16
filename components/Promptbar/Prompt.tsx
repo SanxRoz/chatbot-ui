@@ -64,7 +64,7 @@ export const PromptComponent: FC<Props> = ({
       {(isDeleting || isRenaming) && (
         <div className="absolute right-1 flex text-gray-300">
           <button
-            className="min-w-[20px] p-1 text-neutral-400 hover:text-neutral-100"
+            className="min-w-[20px] p-1 p-1 text-[#474747] hover:text-[#1C1C1C] dark:text-neutral-400 dark:hover:text-neutral-100"
             onClick={(e) => {
               e.stopPropagation();
 
@@ -79,7 +79,7 @@ export const PromptComponent: FC<Props> = ({
           </button>
 
           <button
-            className="min-w-[20px] p-1 text-neutral-400 hover:text-neutral-100"
+            className="min-w-[20px] p-1 p-1 text-[#474747] hover:text-[#1C1C1C] dark:text-neutral-400 dark:hover:text-neutral-100"
             onClick={(e) => {
               e.stopPropagation();
               setIsDeleting(false);
@@ -93,7 +93,7 @@ export const PromptComponent: FC<Props> = ({
       {!isDeleting && !isRenaming && (
         <div className="absolute right-1 flex text-gray-300">
           <button
-            className="min-w-[20px] p-1 text-neutral-400 hover:text-neutral-100"
+            className="min-w-[20px] p-1 p-1 text-[#474747] hover:text-[#1C1C1C] dark:text-neutral-400 dark:hover:text-neutral-100"
             onClick={(e) => {
               e.stopPropagation();
               setIsDeleting(true);
