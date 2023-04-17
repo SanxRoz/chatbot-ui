@@ -29,7 +29,12 @@ import {
 import { saveFolders } from '@/utils/app/folders';
 import { exportData, importData } from '@/utils/app/importExport';
 import { savePrompts } from '@/utils/app/prompts';
-import { IconArrowBarLeft, IconArrowBarRight } from '@tabler/icons-react';
+import {
+  IconLayoutSidebarLeftCollapse,
+  IconLayoutSidebarLeftExpand,
+  IconLayoutSidebarRightExpand,
+  IconLayoutSidebarRightCollapse,
+} from '@tabler/icons-react';
 import { GetServerSideProps } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -735,13 +740,13 @@ const Home: React.FC<HomeProps> = ({
   return (
     <>
       <Head>
-        <title>Chatbot UI</title>
+        <title>mndhv</title>
         <meta name="description" content="ChatGPT but better." />
         <meta
           name="viewport"
           content="height=device-height ,width=device-width, initial-scale=1, user-scalable=no"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       {selectedConversation && (
         <main
@@ -787,7 +792,7 @@ const Home: React.FC<HomeProps> = ({
                   className="fixed top-5 left-[270px] z-50 h-7 w-7 hover:text-gray-400 dark:text-white dark:hover:text-gray-300 sm:top-0.5 sm:left-[270px] sm:h-8 sm:w-8 sm:text-neutral-700"
                   onClick={handleToggleChatbar}
                 >
-                  <IconArrowBarLeft />
+                  <IconLayoutSidebarLeftCollapse />
                 </button>
                 <div
                   onClick={handleToggleChatbar}
@@ -799,7 +804,7 @@ const Home: React.FC<HomeProps> = ({
                 className="fixed top-2.5 left-4 z-50 h-7 w-7 text-white hover:text-gray-400 dark:text-white dark:hover:text-gray-300 sm:top-0.5 sm:left-4 sm:h-8 sm:w-8 sm:text-neutral-700"
                 onClick={handleToggleChatbar}
               >
-                <IconArrowBarRight />
+                <IconLayoutSidebarLeftExpand />
               </button>
             )}
 
@@ -837,7 +842,7 @@ const Home: React.FC<HomeProps> = ({
                   className="fixed top-5 right-[270px] z-50 h-7 w-7 hover:text-gray-400 dark:text-white dark:hover:text-gray-300 sm:top-0.5 sm:right-[270px] sm:h-8 sm:w-8 sm:text-neutral-700"
                   onClick={handleTogglePromptbar}
                 >
-                  <IconArrowBarRight />
+                  <IconLayoutSidebarRightCollapse />
                 </button>
                 <div
                   onClick={handleTogglePromptbar}
@@ -849,7 +854,7 @@ const Home: React.FC<HomeProps> = ({
                 className="fixed top-2.5 right-4 z-50 h-7 w-7 text-white hover:text-gray-400 dark:text-white dark:hover:text-gray-300 sm:top-0.5 sm:right-4 sm:h-8 sm:w-8 sm:text-neutral-700"
                 onClick={handleTogglePromptbar}
               >
-                <IconArrowBarLeft />
+                <IconLayoutSidebarRightExpand />
               </button>
             )}
           </div>

@@ -80,8 +80,8 @@ export const ChatMessage: FC<Props> = memo(
       <div
         className={`group px-4 ${
           message.role === 'assistant'
-            ? 'border-0 bg-gray-50 text-gray-800 dark:bg-[#000000cc] dark:text-gray-100'
-            : 'border-0 bg-white text-gray-800 dark:bg-[#1C1C1C] dark:text-gray-100'
+            ? 'border-0 bg-[#0000001a] text-[#1C1C1C] dark:bg-[#000000cc] dark:text-white'
+            : 'border-0 bg-white text-[#1C1C1C] dark:bg-[#1C1C1C] dark:text-white'
         }`}
         style={{ overflowWrap: 'anywhere' }}
       >

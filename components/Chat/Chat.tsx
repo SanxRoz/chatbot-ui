@@ -4,6 +4,7 @@ import { ErrorMessage } from '@/types/error';
 import { OpenAIModel, OpenAIModelID } from '@/types/openai';
 import { Plugin } from '@/types/plugin';
 import { Prompt } from '@/types/prompt';
+import Image from 'next/image';
 import { throttle } from '@/utils';
 import { IconArrowDown, IconClearAll, IconSettings } from '@tabler/icons-react';
 import { useTranslation } from 'next-i18next';
@@ -154,43 +155,17 @@ export const Chat: FC<Props> = memo(
     return (
       <div className="relative flex-1 overflow-hidden bg-white dark:bg-[#1C1C1C]">
         {!(apiKey || serverSideApiKeyIsSet) ? (
-          <div className="mx-auto flex h-full w-[300px] flex-col justify-center space-y-6 sm:w-[600px]">
+          <div className="mx-auto flex h-full w-[300px] flex-col items-center justify-center space-y-6 sm:w-[600px]">
+            <Image src="/favicon.svg" alt="My Image" width={100} height={100} />
             <div className="text-center text-5xl font-bold text-black dark:text-white">
-              Jst Learn
+              mndhv
             </div>
             <div className="text-center text-lg text-black dark:text-white">
               <div className="mb-2 font-bold">
-                Important: Jst Learn is 100% unaffiliated with OpenAI.
+                Create your custom Chat with AI for your company
               </div>
             </div>
-            <div className="text-center text-gray-500 dark:text-gray-400">
-              <div className="mb-2">
-                Chatbot UI allows you to plug in your API key to use this UI
-                with their API.
-              </div>
-              <div className="mb-2">
-                It is <span className="italic">only</span> used to communicate
-                with their API.
-              </div>
-              <div className="mb-2">
-                {t(
-                  'Please set your OpenAI API key in the bottom left of the sidebar.',
-                )}
-              </div>
-              <div>
-                {t(
-                  "If you don't have an OpenAI API key, you can get one here: ",
-                )}
-                <a
-                  href="https://platform.openai.com/account/api-keys"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-blue-500 hover:underline"
-                >
-                  openai.com
-                </a>
-              </div>
-            </div>
+            <div className="text-center text-gray-500 dark:text-gray-400"></div>
           </div>
         ) : modelError ? (
           <ErrorMessageDiv error={modelError} />
@@ -210,7 +185,7 @@ export const Chat: FC<Props> = memo(
                           <Spinner size="16px" className="mx-auto" />
                         </div>
                       ) : (
-                        'Jst Learn'
+                        'mndhv'
                       )}
                     </div>
                   </div>
