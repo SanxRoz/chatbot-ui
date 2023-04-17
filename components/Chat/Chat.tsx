@@ -155,13 +155,8 @@ export const Chat: FC<Props> = memo(
     return (
       <div className="relative flex-1 overflow-hidden bg-white dark:bg-[#1C1C1C]">
         {!(apiKey || serverSideApiKeyIsSet) ? (
-          <div className="mx-auto flex h-full w-[300px] flex-col justify-center space-y-6 sm:w-[600px]">
-            <Image
-              src="./mndhv.png"
-              alt="My Image"
-              width={100}
-              height={100}
-            />
+          <div className="mx-auto flex h-full w-[300px] flex-col items-center justify-center space-y-6 sm:w-[600px]">
+            <Image src="/mndhv.png" alt="My Image" width={100} height={100} />
             <div className="text-center text-5xl font-bold text-black dark:text-white">
               mndhv
             </div>
