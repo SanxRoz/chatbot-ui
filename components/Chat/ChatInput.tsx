@@ -271,14 +271,6 @@ export const ChatInput: FC<Props> = ({
       <div className="border-t border-[#00000033] py-px backdrop-blur dark:border-[#ffffff33]">
         <div className="stretch mx-2 mt-4 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-3xl">
           <div className="relative mx-2 flex w-full flex-grow flex-col rounded-2xl border border-black/10 bg-white dark:bg-[#ffffff1a] dark:text-white sm:mx-4">
-            <button
-              className="absolute left-2 top-2 rounded-sm p-1 text-[#1C1C1C] opacity-60 hover:bg-neutral-200 hover:text-neutral-900 dark:bg-opacity-50 dark:text-neutral-100 dark:hover:text-neutral-200"
-              onClick={() => setShowPluginSelect(!showPluginSelect)}
-              onKeyDown={(e) => {}}
-            >
-              {plugin ? <IconBrandGoogle size={20} /> : <IconBolt size={20} />}
-            </button>
-
             {showPluginSelect && (
               <div className="absolute left-0 bottom-14 rounded-lg bg-white dark:bg-[#ffffff1a]">
                 <PluginSelect
@@ -297,7 +289,7 @@ export const ChatInput: FC<Props> = ({
 
             <textarea
               ref={textareaRef}
-              className="m-0 w-full resize-none rounded-2xl border-0 bg-transparent p-0 py-2 pr-8 pl-10 text-black backdrop-blur dark:bg-transparent dark:text-white dark:placeholder:text-[#ffffff33] md:py-3 md:pl-10"
+              className="m-0 w-full resize-none rounded-2xl border-0 bg-transparent p-0 py-2 pr-8 pl-4 text-black backdrop-blur dark:bg-transparent dark:text-white dark:placeholder:text-[#ffffff33] md:py-3 md:pl-4"
               style={{
                 resize: 'none',
                 bottom: `${textareaRef?.current?.scrollHeight}px`,
