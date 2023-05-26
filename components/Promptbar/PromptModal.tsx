@@ -69,7 +69,7 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
             </div>
             <input
               ref={nameInputRef}
-              className="mt-2 w-full rounded-lg border-0 bg-[#0000001a] px-4 py-2 text-neutral-900 placeholder:text-[#0000004d] focus:outline-none dark:border-neutral-800 dark:border-opacity-50 dark:bg-[#ffffff1a] dark:text-neutral-100"
+              className="mt-2 w-full rounded-lg border-0 bg-[#0000001a] px-4 py-2 text-neutral-900 placeholder:text-[#0000004d] focus:outline-none dark:border-neutral-800 dark:border-opacity-50 dark:bg-[#ffffff1a] dark:text-neutral-100 dark:placeholder:text-[#ffffff1a]"
               placeholder={t('A name for your prompt.') || ''}
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -79,7 +79,7 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
               {t('Description')}
             </div>
             <textarea
-              className="mt-2 w-full rounded-lg border-0 bg-[#0000001a] px-4 py-2 text-neutral-900 placeholder:text-[#0000004d] focus:outline-none dark:border-neutral-800 dark:border-opacity-50 dark:bg-[#ffffff1a] dark:text-neutral-100"
+              className="mt-2 w-full rounded-lg border-0 bg-[#0000001a] px-4 py-2 text-neutral-900 placeholder:text-[#0000004d] focus:outline-none dark:border-neutral-800 dark:border-opacity-50 dark:bg-[#ffffff1a] dark:text-neutral-100 dark:placeholder:text-[#ffffff1a]"
               style={{ resize: 'none' }}
               placeholder={t('A description for your prompt.') || ''}
               value={description}
@@ -91,7 +91,7 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
               {t('Prompt')}
             </div>
             <textarea
-              className="mt-2 w-full rounded-lg border-0 bg-[#0000001a] px-4 py-2 text-neutral-900 placeholder:text-[#0000004d] focus:outline-none dark:border-neutral-800 dark:border-opacity-50 dark:bg-[#ffffff1a] dark:text-neutral-100"
+              className="mt-2 w-full rounded-lg border-0 bg-[#0000001a] px-4 py-2 text-neutral-900 placeholder:text-[#0000004d] focus:outline-none dark:border-neutral-800 dark:border-opacity-50 dark:bg-[#ffffff1a] dark:text-neutral-100 dark:placeholder:text-[#ffffff1a]"
               style={{ resize: 'none' }}
               placeholder={
                 t(
